@@ -1,3 +1,39 @@
+# Проблема  
+Из-за блокировки российских адресов на <https://releases.hashicorp.com> стало невозможно устанавливать любимые инструменты через [Homebrew](https://brew.sh)  
+Этот репозиторий создан чтобы решить эту проблему  
+
+# Быстрый старт  
+
+```
+$ brew tap vandud/hashicorp-tap
+$ brew install vandud/hashicorp-tap/terraform
+$ brew install vandud/hashicorp-tap/vault
+```
+
+# Как работает  
+Эта репа - форк [hashicorp/homebrew-tap](https://github.com/hashicorp/homebrew-tap) в котором просто заменены ссылки на бинари с releases.hashicorp.com на зеркало от YCloud - <https://hashicorp-releases.yandexcloud.net/>  
+Ниже лог установки в котором это хорошо видно  
+```
+$ brew search terraform
+==> Formulae
+iam-policy-json-to-terraform                    terraform-graph-beautifier                      terraform-ls                                    terraform-rover                                 vandud/hashicorp-tap/consul-terraform-sync
+terraform                                       terraform-inventory                             terraform-lsp                                   terraform_landscape                             vandud/hashicorp-tap/terraform
+terraform-docs                                  terraform-local                                 terraform-provider-libvirt                      terraformer                                     vandud/hashicorp-tap/terraform-ls
+
+If you meant "terraform" specifically:
+It was migrated from homebrew/cask to homebrew/core.
+$ brew install vandud/hashicorp-tap/terraform
+==> Auto-updating Homebrew...
+==> Fetching vandud/hashicorp-tap/terraform
+==> Downloading https://hashicorp-releases.yandexcloud.net/terraform/1.9.8/terraform_1.9.8_darwin_arm64.zip
+Already downloaded: /Users/vandud/Library/Caches/Homebrew/downloads/b4e7c359ef1dde3c5df8894625c7f6d6e989c4af2ddbfac4e2a454b52e8188c2--terraform_1.9.8_darwin_arm64.zip
+==> Installing terraform from vandud/hashicorp-tap
+🍺  /Users/vandud/homebrew/Cellar/terraform/1.9.8: 5 files, 83.9MB, built in 1 second
+==> Running `brew cleanup terraform`...
+```
+
+---
+
 [![Heimdall](https://heimdall.hashicorp.services/api/v1/assets/homebrew-tap/badge.svg?key=f0ea6d408d7a7798bcd4f6ef4a40fe9c791109ca85d2f20d5630a9f4abafa9f6)](https://heimdall.hashicorp.services/site/assets/homebrew-tap)
 
 # HashiCorp Homebrew Tap
