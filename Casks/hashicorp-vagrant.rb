@@ -6,7 +6,7 @@ cask "hashicorp-vagrant" do
   arch arm: "arm64", intel: "amd64"
   sha256 arm: "dec702353ed087d1e1a18a22c3af75d644eb8004ddbcb2cf337c0bfc471842d3",
          intel: "dec702353ed087d1e1a18a22c3af75d644eb8004ddbcb2cf337c0bfc471842d3"
-  url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_darwin_#{arch}.dmg",
+  url "https://hashicorp-releases.yandexcloud.net/vagrant/#{version}/vagrant_#{version}_darwin_#{arch}.dmg",
       verified: "hashicorp.com/vagrant/"
   name "Vagrant"
   desc "Development environment"
