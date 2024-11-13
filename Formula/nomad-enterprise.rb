@@ -4,26 +4,26 @@
 class NomadEnterprise < Formula
   desc "Nomad Enterprise"
   homepage "https://www.nomadproject.io/"
-  version "1.9.1+ent"
+  version "1.9.3+ent"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/nomad/1.9.1+ent/nomad_1.9.1+ent_darwin_amd64.zip"
-    sha256 "4685a0bca5799f7255ecd601a753d33f3e91225a8e67c3b2bf70dbace7933e8d"
+    url "https://hashicorp-releases.yandexcloud.net/nomad/1.9.3+ent/nomad_1.9.3+ent_darwin_amd64.zip"
+    sha256 "39e0629ba88e6428d642d6cca630da18c075943197cafe954b0603f6beb342f4"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://hashicorp-releases.yandexcloud.net/nomad/1.9.1+ent/nomad_1.9.1+ent_darwin_arm64.zip"
-    sha256 "253e6a6b28be3ed9cd0c4fa9a193e545061bb019d57fe45b7256fcaf2d652bd9"
+    url "https://hashicorp-releases.yandexcloud.net/nomad/1.9.3+ent/nomad_1.9.3+ent_darwin_arm64.zip"
+    sha256 "ad66da9be43515db1e025c8445e3fb5efa46a53d8b00723e63d5f7a4c28551e1"
   end
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://hashicorp-releases.yandexcloud.net/nomad/1.9.1+ent/nomad_1.9.1+ent_linux_amd64.zip"
-    sha256 "9b6b7398ef651b2f27e4ea5b0bb73c9781c2f9fedeb94c001fe0092c4a608be1"
+    url "https://hashicorp-releases.yandexcloud.net/nomad/1.9.3+ent/nomad_1.9.3+ent_linux_amd64.zip"
+    sha256 "0f60544a4c46e5bba344b2b53c48a11017c4a6df2ef2f6accd4662bd24fd887f"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://hashicorp-releases.yandexcloud.net/nomad/1.9.1+ent/nomad_1.9.1+ent_linux_arm64.zip"
-    sha256 "7efdc6ff61acf79642f543c929fecd8661d7a467f5038f8c389b29d5d2c8cfaa"
+    url "https://hashicorp-releases.yandexcloud.net/nomad/1.9.3+ent/nomad_1.9.3+ent_linux_arm64.zip"
+    sha256 "af62f21a34092fdd8d2392a818592153bacf35a0d191b1de8b8a9d77706bfcde"
   end
 
   conflicts_with "nomad-enterprise"
