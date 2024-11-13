@@ -32,6 +32,11 @@ Already downloaded: /Users/vandud/Library/Caches/Homebrew/downloads/b4e7c359ef1d
 ==> Running `brew cleanup terraform`...
 ```
 
+# Команда для замены ссылок  
+```
+rg releases.hashicorp.com -l Formula/ | xargs -I% sed -i '' 's/releases.hashicorp.com/hashicorp-releases.yandexcloud.net/g' %
+```
+
 ---
 
 [![Heimdall](https://heimdall.hashicorp.services/api/v1/assets/homebrew-tap/badge.svg?key=f0ea6d408d7a7798bcd4f6ef4a40fe9c791109ca85d2f20d5630a9f4abafa9f6)](https://heimdall.hashicorp.services/site/assets/homebrew-tap)
